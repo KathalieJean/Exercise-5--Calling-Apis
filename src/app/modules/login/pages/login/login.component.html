@@ -1,0 +1,27 @@
+<div mat-dialog-title>
+    <h2>LOGIN</h2>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+    <div mat-dialog-content>
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input formControlName="password" matInput />
+        </mat-form-field>
+      </div>
+    </div>
+    <div mat-dialog-actions class="action">
+      <button type="submit" color="primary" class="btn btn-success">Login</button><br><br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  </form>
+  
+  

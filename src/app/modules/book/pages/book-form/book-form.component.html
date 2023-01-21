@@ -1,0 +1,26 @@
+<div mat-dialog-title>
+    <h3>Book Form</h3>
+  </div>
+  <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <div mat-dialog-content>
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input formControlName="title" matInput />
+        </mat-form-field>
+      </div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Authors</mat-label>
+          <textarea
+            formArrayName="authors"
+            matInput
+          ></textarea>
+        </mat-form-field>
+      </div>
+    <div mat-dialog-actions class="action">
+      <button mat-raised-button color="primary" type="submit">
+        {{ data ? "Update" : "Save" }}
+      </button>
+    </div>
+  </form>
+  
